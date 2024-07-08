@@ -1,6 +1,6 @@
 package controllers;
 
-import java.util.HashMap;
+import java.util.Arrays;
 
 public class Ejercicios {
 
@@ -28,7 +28,23 @@ public class Ejercicios {
      * frecuencia.
      */
     public static boolean areAnagrams(String str1, String str2) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        // SI EL PRIMER STRING ES DIFERENTE AL SEGUNDO ENTONCES FALSE
+        if (str1.length()!= str2.length()) {
+            return false;
+        }
+        
+        // CONVERTIMOS A CARACTERES
+        char[] arr1 = str1.toCharArray();
+        char[] arr2 = str2.toCharArray();
+        
+        //ORDENAMOS
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+
+        //COMPARAMOS
+        return Arrays.equals(arr1, arr2);
+        
+       
 
     }
 
@@ -48,6 +64,7 @@ public class Ejercicios {
      * Output: null
      */
     public int[] sumatoriaDeDos(int[] nums, int objetivo) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        //Completar el siguiente ejercicio
+      return nums;
     }
 }
